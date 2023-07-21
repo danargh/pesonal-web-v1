@@ -20,11 +20,7 @@ import { TypeAnimation } from 'react-type-animation';
 const Header = () => {
    return (
       <div className="app__header app__flex">
-         <motion.div
-            whileInView={{ x: [-100, 0], opacity: [0, 1] }}
-            transition={{ duration: 3 }}
-            className="app__header-info"
-         >
+         <motion.div whileInView={{ x: [-100, 0], opacity: [0, 1] }} transition={{ duration: 3 }} className="app__header-info">
             <div className="app__header-badge">
                <div className="app__header-content">
                   <img src={images.profiledanar} alt="Profile" width="100px" />
@@ -58,9 +54,7 @@ const Header = () => {
                      {/* <p className="greet-text">👋 Hello, I am Danar</p> */}
                   </div>
                   <div style={{ marginTop: 40 }}>
-                     <p className="head-text">
-                        Frontend Developer & UI/UX Designer
-                     </p>
+                     <p className="head-text">Frontend Developer & UI/UX Designer</p>
                   </div>
                   <div
                      style={{
