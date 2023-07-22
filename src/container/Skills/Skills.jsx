@@ -49,16 +49,10 @@ const Skills = () => {
                               <motion.div whileInView={{ duration: [0, 1] }} transition={{ duration: 0.5 }} className="app__skills-exp-work" data-tip data-for={work.name} key={work.name}>
                                  <h4 className="bold-text">{work.name}</h4>
                                  <p className="p-text">{work.company}</p>
-                                 <p>{work.desc}</p>
+                                 <p className="p-text" style={{ color: 'var(--secondary-color)' }}>
+                                    {work.desc}
+                                 </p>
                               </motion.div>
-                              {/* <Tooltip
-                                 id={work.name}
-                                 effect="solid"
-                                 arrowColor="#fff"
-                                 className="skills-tooltip"
-                              >
-                                 {work.desc}
-                              </Tooltip> */}
                            </>
                         ))}
                      </motion.div>
