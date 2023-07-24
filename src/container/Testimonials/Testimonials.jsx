@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
 import LazyLoadImageComponent from '../../components/LazyLoad/LazyLoadImageComponent';
 import { AppWrap, MotionWrap } from '../../wrapper';
-import { urlFor, client } from '../../client';
+import { client } from '../../client';
 import './Testimonials.scss';
 
 const Testimonials = () => {
