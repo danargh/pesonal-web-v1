@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
-
+import LazyLoadImageComponent from '../../components/LazyLoad/LazyLoadImageComponent';
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { urlFor, client } from '../../client';
 import './Testimonials.scss';
@@ -28,7 +28,8 @@ const Testimonials = () => {
          {testimonials.length && (
             <>
                <div className="app__testimonial-item app__flex">
-                  <img src={urlFor(test.imgurl)} alt="testimonial" />
+                  {/* <img src={urlFor(test.imgurl)} alt="testimonial" /> */}
+                  <LazyLoadImageComponent width={100} height={100} imageUrl={test.imgurl} imageName={test.imageUrl} />
                   <div className="app__testimonial-content">
                      <p className="p-text">{testimonials[currentIndex].feedback}</p>
                      <h4 className="bold-text">{test.name}</h4>

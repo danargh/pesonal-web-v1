@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { AiFillEye, AiFillGithub } from 'react-icons/ai';
 import { motion } from 'framer-motion';
-
+import LazyLoadImageComponent from '../../components/LazyLoad/LazyLoadImageComponent';
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { urlFor, client } from '../../client';
 import './Work.scss';
@@ -52,7 +52,8 @@ const Work = () => {
                return (
                   <div className="app__work-item app__flex" key={index}>
                      <div className="app__work-img app__flex">
-                        <img src={urlFor(work.imgUrl)} alt={work.name} />
+                        {/* <img src={urlFor(work.imgUrl)} alt={work.name} /> */}
+                        <LazyLoadImageComponent width={238} height={230} imageUrl={work.imgUrl} imageName={work.imageUrl} />
 
                         <motion.div
                            whileHover={{ opacity: [0, 1] }}
